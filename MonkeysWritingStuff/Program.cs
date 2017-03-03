@@ -9,18 +9,13 @@ namespace MonkeysWritingStuff
         static void Main(string[] args)
         {
             //a decent object model would make this easier
-
             string firstLine = "ACT I SCENE I Elsinore A platform before the castle at his post Enter to him Whos there Nay answer me stand and unfold yourself Long live the king He You come most carefully upon your hour Tis now struck twelve get thee to bed For this relief much thanks tis bitter cold And I am sick at heart Have you had quiet guard Not a mouse stirring".ToLower();
-            //string firstLine = "Elsinore A platform before the castle".ToLower();
-            //string firstLine = "ACT I SCENE I".ToLower();
             string[] letters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
             Random rnd = new Random();
 
             string[] firstLineByWord = firstLine.Split(' ');
-            double totalAttempts = 0;
             int RepeatCount = 500;
-            double averageTotalAttemptsPerLine = 0;
-            double totalSeconds = 0;
+            double averageTotalAttemptsPerLine = 0, totalSeconds = 0, totalAttempts = 0, attemptsPerWord;
 
             //loop to increase estimation accuracy
             for (int j = 0; j < RepeatCount; j++)
@@ -31,7 +26,7 @@ namespace MonkeysWritingStuff
                 foreach (string s in firstLineByWord)
                 {
                     char[] word = s.ToCharArray();
-                    double attemptsPerWord = 0;
+                    attemptsPerWord = 0;
                     int positionInWord = 0;
                     string GuessWord = "";
                     Console.WriteLine("Current word length: " + word.Length);
