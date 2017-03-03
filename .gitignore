@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/MonkeysWritingStuff/v14
+/MonkeysWritingStuff/bin/Debug
+/MonkeysWritingStuff/obj/Debug
+/MonkeysWritingStuff/App.config
+/MonkeysWritingStuff/Properties
